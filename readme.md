@@ -4,8 +4,7 @@
 
 # 🎨 DESIGNMD: The Ultimate Design Extractor
 
-> **URLを入力するだけで、あらゆるウェブサイトから洗練されたデザインドキュメント（DESIGN.md）を自動生成。**  
-> Simply enter a URL and instantly output a structured design system in Markdown.
+> **Transform any website into a structured design system (DESIGN.md) instantly by just entering a URL.**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![VS Code Extension](https://img.shields.io/badge/VS%20Code-Extension-blue.svg)](https://marketplace.visualstudio.com/)
@@ -13,54 +12,54 @@
 
 ---
 
-## ✨ 究極の「URL to Design」体験 (Key Features)
+## ✨ The "URL to Design" Experience
 
-DESIGNMDは、ウェブサイトのCSSOM（CSS Object Model）を直接解析し、AI（ローカルLLM）を活用して、実装に直結するデザインガイドラインを生成するVS Code拡張機能です。
+DESIGNMD is a VS Code extension that directly analyzes a website's CSSOM (CSS Object Model) and leverages local LLMs (via llama.cpp) to generate comprehensive design guidelines ready for implementation.
 
-- 🚀 **瞬時の抽出 (Instant Extraction)**: URLを入力するだけで、色、タイポグラフィ、スペーシング、コンポーネントを数秒で抽出。
-- 🧠 **AIによる解説 (AI-Powered Insights)**: `llama.cpp`との連携により、デザインの哲学、Do's & Don'ts、コンポーネントの使い分けを自動生成。
-- 📂 **4つの強力な出力フォーマット**:
-  - `DESIGN.md`: AIエージェント（Cursor/Windsurf等）が即座に理解できる構造化ドキュメント。
-  - `Tailwind v4`: 最新の `@theme` ブロック形式。
-  - `CSS Variables`: `:root` カスタムプロパティ。
-  - `DTCG JSON`: デザインツール（Figma等）で利用可能な標準フォーマット。
-
----
-
-## 🛠 使い方 (How to Use)
-
-1. **コマンドを実行**: `Ctrl+Shift+D` を押すか、コマンドパレットから `Design Extractor: Extract Design System from URL` を選択。
-2. **URLを入力**: 抽出したいウェブサイトのURLを入力します。
-3. **出力を確認**: 生成されたデザインシステムがウェブビューでプレビューされます。
-4. **保存**: 必要なフォーマットを選んでダウンロード！
+- 🚀 **Instant Extraction**: Extract colors, typography, spacing, and components from any URL in seconds.
+- 🧠 **AI-Powered Insights**: Uses `llama.cpp` to automatically generate design philosophy, Do's & Don'ts, and component usage guidance.
+- 📂 **Multi-Format Export**:
+  - `DESIGN.md`: Structured documentation optimized for AI agents (Cursor, Windsurf, etc.).
+  - `Tailwind v4`: Modern `@theme` block format for seamless integration.
+  - `CSS Variables`: Ready-to-use `:root` custom properties.
+  - `DTCG JSON`: Standard format for design tools like Figma.
 
 ---
 
-## 📝 生成例 (Real-world Example)
+## 🛠 How to Use
 
-`https://note.com` から抽出された実際の `DESIGN.md` の抜粋です：
+1. **Launch Command**: Press `Ctrl+Shift+D` or select `Design Extractor: Extract Design System from URL` from the Command Palette.
+2. **Enter URL**: Provide the website URL you wish to analyze.
+3. **Preview**: Review the extracted design system in the interactive Webview panel.
+4. **Save**: Download your preferred format and drop it into your project.
+
+---
+
+## 📝 Generation Example
+
+A snippet from a real `DESIGN.md` extracted from `https://note.com`:
 
 ```markdown
 ## Overview
-CSSOM周波数解析に基づくデザイントークン。
+Design tokens extracted via CSSOM frequency analysis.
 
 ## Colors
-- **Primary-1** (#08131a): ダークで重厚なメインカラー
-- **Surface** (#ffffff): 清潔感のあるベースホワイト
-- **Accent** (#1e7b65): インタラクティブ要素へのアクセント
+- **Primary-1** (#08131a): Deep, professional main color
+- **Surface** (#ffffff): Clean base white
+- **Accent** (#1e7b65): Vibrant accent for interactive elements
 
 ## Typography
-Helvetica Neueをベースとした、可読性の高いサンセリフ。
+Clean sans-serif based on Helvetica Neue for high readability.
 
 ## Do's and Don'ts
-✅ Do: ベースグリッドを使用して一貫した余白を維持する
-✅ Do: 最も重要なアクションにのみアクセントカラーを使用する
-❌ Don't: 1つのビュー内で異なる角丸（border-radius）を混ぜない
+✅ Do: Maintain consistent white space using the base grid.
+✅ Do: Use the accent color only for the primary call-to-action.
+❌ Don't: Mix different border-radii within a single view.
 ```
 
 ---
 
-## 🚀 技術スタック (Architecture)
+## 🚀 Technical Architecture
 
 ```mermaid
 graph TD
@@ -79,9 +78,9 @@ graph TD
 
 ---
 
-## 📥 セットアップ (Setup)
+## 📥 Setup
 
-### 1. インストール
+### 1. Installation
 ```bash
 git clone https://github.com/msandroid/DESIGNMD.git
 cd DESIGNMD
@@ -89,28 +88,28 @@ npm install
 npm run compile
 ```
 
-### 2. ローカルAIの連携 (推奨)
-`llama.cpp`をバックエンドとして実行することで、より質の高い解説が生成されます。
+### 2. Local AI Integration (Recommended)
+Run `llama.cpp` as a backend to enable high-quality prose generation.
 ```bash
 ./llama-server -m model.gguf --port 8000
 ```
-デフォルトでは `http://localhost:8000` を参照します。
+By default, the extension connects to `http://localhost:8000`.
 
 ---
 
-## 🛣 ロードマップ (Roadmap)
+## 🛣 Roadmap
 
-- [ ] **Headless Browser**: Playwrightによる完璧な計算済みスタイルの取得。
-- [ ] **Figma Direct Export**: 直接Figmaファイルへ書き出し。
-- [ ] **Design Diff**: 2つのサイトのデザイン差分を視覚化。
+- [ ] **Headless Browser**: Use Playwright for perfect computed style extraction.
+- [ ] **Figma Direct Export**: Direct upload to Figma files.
+- [ ] **Design Diff**: Visual comparison of design changes between two versions.
 
 ---
 
-## 🤝 サポート & コントリビュート
+## 🤝 Support & Contribution
 
-このプロジェクトが気に入ったら、ぜひスターをお願いします！また、[Ko-fi](https://ko-fi.com/aoi_android)でのサポートも歓迎しています。
+If you find this project helpful, please give us a star! You can also support the developer on [Ko-fi](https://ko-fi.com/aoi_android).
 
 ---
 
 **Built with ❤️ for AI-native developers.**  
-*Made for AI agents like Cursor, Windsurf, and Claude Code.*
+*Optimized for AI agents like Cursor, Windsurf, and Claude Code.*
