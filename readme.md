@@ -99,7 +99,7 @@ By default, the extension connects to `http://localhost:8000`.
 
 ## 🤝 Support & Contribution
 
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'J3J0TGH72');kofiwidget2.draw();</script> 
+<a href='https://ko-fi.com/J3J0TGH72' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 If you find this project helpful, please give us a star! You can also support the developer on [Ko-fi](https://ko-fi.com/aoi_android).
 
