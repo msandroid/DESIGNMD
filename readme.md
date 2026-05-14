@@ -97,14 +97,6 @@ By default, the extension connects to `http://localhost:8000`.
 
 ---
 
-## 🛣 Roadmap
-
-- [ ] **Headless Browser**: Use Playwright for perfect computed style extraction.
-- [ ] **Figma Direct Export**: Direct upload to Figma files.
-- [ ] **Design Diff**: Visual comparison of design changes between two versions.
-
----
-
 ## 🤝 Support & Contribution
 
 If you find this project helpful, please give us a star! You can also support the developer on [Ko-fi](https://ko-fi.com/aoi_android).
