@@ -1,0 +1,21 @@
+# Ignore source TypeScript files but keep the webview HTML
+src/**/*.ts
+src/**/*.tsx
+src/**/*.js.map
+src/**/*.ts.map
+
+# Ignore development files
+.vscode/**
+.git
+.gitignore
+.vsceignore
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ignore docs and notes not required in package
+IMPLEMENTATION.md
+
+# Keep webview HTML
+!src/webview/main.html

@@ -1,0 +1,60 @@
+{
+  "name": "design-extractor",
+  "displayName": "Design Extractor",
+  "description": "Extract design systems from websites and generate DESIGN.md files using local LLM",
+  "version": "0.1.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/local/design-extractor"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:design-extractor.extract"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "design-extractor.extract",
+        "title": "Extract Design System from URL"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "design-extractor.extract",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.92.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vscode/vsce": "^2.7.1",
+    "eslint": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "axios": "^1.6.0",
+    "node-fetch": "^3.3.0"
+  }
+}
